@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.mjs",
   "scripts": {
-    "dev": "node --watch index.mjs",
+    "dev": "nodemon index.mjs",
     "start": "node index.mjs"
   },
   "keywords": [],
@@ -13,5 +13,8 @@
   "type": "module",
   "dependencies": {
     "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
   }
 }
