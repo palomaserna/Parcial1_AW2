@@ -1,5 +1,6 @@
 import * as modelo from './modelo.peliculas.mjs'
 
+// Controlador para obtener todas las peliculas
 export function obtenerPeliculas(req, res) {
     const peliculas = modelo.obtenerTodos()
     res.status(200).json({
@@ -9,6 +10,7 @@ export function obtenerPeliculas(req, res) {
     })
 }
 
+// Controlador para obtener una sola pelicula por id
 export function obtenerPeliculaPorId(req, res) {
     const peliculas = modelo.obtenerUno(req.params.id)
     if (peliculas.length > 0) {
@@ -24,6 +26,7 @@ export function obtenerPeliculaPorId(req, res) {
     })
 }
 
+// Controlador para obtener las peliculas destacadas
 export function obtenerDestacadas(req, res) {
     const peliculas = modelo.obtenerDestacadas()
     res.status(200).json({
